@@ -20,18 +20,18 @@ const ThemeToggle = () => {
   return (
     <Button
       className={cn(
-        "bg-foreground hover:bg-foreground/80 transition-all dark:bg-primary dark:hover:bg-primary/80",
+        "bg-foreground rounded-sm hover:bg-foreground/80 transition-all dark:bg-primary dark:hover:bg-primary/80",
       )}
       onClick={onToggleTheme}
     >
       <SunIcon
         className={cn(
-          "h-[1.2rem] w-[1.2rem] scale-0 transition-all dark:scale-100",
+          "h-[1.4rem] w-[1.4rem] scale-0 transition-all dark:scale-100",
         )}
       />
       <MoonIcon
         className={cn(
-          "h-[1.2rem] w-[1.2rem] absolute scale-100 transition-all  dark:scale-0",
+          "h-[1.4rem] w-[1.4rem] absolute scale-100 transition-all  dark:scale-0",
         )}
       />
     </Button>
