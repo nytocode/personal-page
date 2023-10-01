@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const Navbar = () => {
   return (
@@ -24,7 +25,15 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <div className="ml-auto">
+      <div className="ml-auto flex items-center gap-5">
+        <a
+          href="https://github.com/nytocode/personal-webapp"
+          target="_blank"
+          className="flex items-center gap-1 cursor-pointer"
+        >
+          <GitHubLogoIcon className="h-[1.4rem] w-[1.4rem]" />
+          <span className="">Source</span>
+        </a>
         <ThemeToggle />
       </div>
     </header>

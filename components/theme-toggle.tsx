@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import { useCallback } from "react";
+import { Switch } from "./ui/switch";
 
 const ThemeToggle = () => {
   const { setTheme, theme } = useTheme();
@@ -18,23 +19,19 @@ const ThemeToggle = () => {
   }, [theme]);
 
   return (
-    <Button
-      className={cn(
-        "bg-foreground rounded-sm hover:bg-foreground/80 transition-all dark:bg-primary dark:hover:bg-primary/80",
-      )}
-      onClick={onToggleTheme}
-    >
-      <SunIcon
-        className={cn(
-          "h-[1.4rem] w-[1.4rem] scale-0 transition-all dark:scale-100",
-        )}
-      />
+    <div className="flex items-center gap-2">
+      <Switch onCheckedChange={onToggleTheme} checked={theme === "light"} />
       <MoonIcon
         className={cn(
-          "h-[1.4rem] w-[1.4rem] absolute scale-100 transition-all  dark:scale-0",
+          "h-[1.4rem] w-[1.4rem] hidden scale-0 transition-all  dark:scale-100 dark:inline",
         )}
       />
-    </Button>
+      <SunIcon
+        className={cn(
+          "h-[1.4rem] w-[1.4rem] scale-100 transition-all dark:scale-0 dark:hidden",
+        )}
+      />
+    </div>
   );
 };
 

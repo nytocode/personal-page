@@ -1,3 +1,6 @@
+import { Badge } from "@/components/ui/badge";
+import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
+
 export default function Home() {
   return (
     <div className="flex-1 overflow-y-scroll flex flex-col w-[700px] mx-auto pt-[100px]">
@@ -10,7 +13,6 @@ export default function Home() {
         </h3>
       </div>
       <div className="mt-[2rem]">
-        <h2 className="mb-[0.8rem] text-xl font-medium">ABOUT</h2>
         <p className="text-muted-foreground">
           Full-Stack Software Engineer, based in Italy, passionate about
           building amazing and useful digital products. Currently working at an
@@ -22,7 +24,9 @@ export default function Home() {
       </div>
       <span className="w-[30%] h-1 my-[1.5rem] rounded-full bg-muted-foreground"></span>
       <div>
-        <h2 className="text-xl font-medium mb-[0.8rem]">BIO</h2>
+        <div className="mb-[0.8rem]">
+          <h2 className="text-xl font-medium">BIO</h2>
+        </div>
         <ul className="flex flex-col gap-1">
           <li className="flex items-start gap-2">
             <h4 className="font-medium tracking-wider mr-[1rem]">2020</h4>
@@ -52,8 +56,32 @@ export default function Home() {
           </li>
         </ul>
       </div>
+      <span className="w-[30%] h-1 ml-auto my-[1.5rem] rounded-full bg-muted-foreground"></span>
       <div>
-        <h2 className="text-xl font-medium mb-[0.8rem]">INTERESTS</h2>
+        <div className="mb-[0.8rem]">
+          <h2 className="text-xl font-medium w-fit ml-auto">INTERESTS</h2>
+        </div>
+        <div className="flex justify-end gap-2">
+          <Badge>Gym</Badge>
+          <Badge>Cooking</Badge>
+          <Badge>Music</Badge>
+        </div>
+      </div>
+      <span className="w-[30%] h-1 my-[1.5rem] rounded-full bg-muted-foreground"></span>
+      <div>
+        <div className="mb-[0.8rem]">
+          <h2 className="text-xl font-medium">CONTACTS</h2>
+        </div>
+        <ul>
+          <li className="flex items-center gap-2">
+            <GitHubLogoIcon />
+            <span>nytocode</span>
+          </li>
+          <li className="flex items-center gap-2">
+            <InstagramLogoIcon />
+            <span>anto4te</span>
+          </li>
+        </ul>
       </div>
     </div>
   );
