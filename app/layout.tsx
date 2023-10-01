@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const ibm_plex_mono = IBM_Plex_Mono({
   weight: ["100", "300", "400", "500", "700"],
@@ -31,6 +32,7 @@ export default function RootLayout({
           <div className="h-screen w-screen flex flex-col">
             <Navbar />
             {children}
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

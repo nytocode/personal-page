@@ -4,8 +4,7 @@ import ThemeToggle from "./theme-toggle";
 const Navbar = () => {
   return (
     <header className="w-[1000px] mx-auto p-4 flex items-center">
-      <h2 className="text-xl font-medium">Antonio Forte</h2>
-      <nav className="ml-4">
+      <nav>
         <ul className="flex items-center gap-4">
           <li>
             <Link
