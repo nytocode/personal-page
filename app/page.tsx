@@ -3,7 +3,7 @@ import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (
-    <div className="flex-1 overflow-y-scroll flex flex-col w-[700px] mx-auto pt-[100px]">
+    <div className="flex-1 overflow-y-scroll flex flex-col w-[700px] mx-auto px-5 pt-[100px]">
       <div className="flex flex-col">
         <h1 className="text-2xl font-medium tracking-wider mb-[0.5rem]">
           Antonio Forte
