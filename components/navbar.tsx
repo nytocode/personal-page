@@ -1,11 +1,13 @@
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import MobileMenu from "./mobile-menu";
 
 const Navbar = () => {
   return (
-    <header className="w-[1000px] mx-auto p-4 flex items-center">
-      <nav>
+    <header className="bg-background w-full max-w-[1000px] mx-auto p-4 md:flex flex-row items-center justify-between">
+      <MobileMenu />
+      <nav className="hidden md:inline-block">
         <ul className="flex items-center gap-4">
           <li>
             <Link
@@ -25,7 +27,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <div className="ml-auto flex items-center gap-5">
+      <div className="hidden md:flex items-center gap-5">
         <a
           href="https://github.com/nytocode/personal-webapp"
           target="_blank"

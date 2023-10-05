@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex-1 overflow-y-scroll flex flex-col w-[90%] max-w-[700px] mx-auto px-5 py-[50px]">
-      <div className="mb-10 flex justify-center md:justify-start">
+      <div className="mb-4">
         <Image
           className="rounded-full grayscale"
           alt="profile picture"
@@ -32,7 +32,7 @@ export default function Home() {
           myself with some freelance work.
         </p>
       </div>
-      <hr className="mx-auto md:mx-0 my-10 min-h-1 w-[50%] bg-muted-foreground" />
+      <hr className="my-4 min-h-0.5" />
       <div>
         <div className="mb-[0.8rem]">
           <h2 className="text-xl font-medium">BIO</h2>
@@ -66,33 +66,17 @@ export default function Home() {
           </li>
         </ul>
       </div>
-
-      <hr className="my-10 mx-auto md:mr-0 md:ml-auto min-h-1 w-[50%] bg-muted-foreground" />
+      <hr />
       <div>
         <div className="mb-[0.8rem]">
-          <h2 className="text-xl font-medium w-fit md:ml-auto">INTERESTS</h2>
+          <h2 className="text-xl font-medium w-fit ml-auto">INTERESTS</h2>
         </div>
-        <div className="flex md:justify-end gap-2">
+        <div className="flex justify-end gap-2">
           <Badge>Gym</Badge>
           <Badge>Cooking</Badge>
           <Badge>Music</Badge>
         </div>
       </div>
-      <hr className="mx-auto md:mx-0 my-10 min-h-1 w-[50%] bg-muted-foreground" />
-      <div>
-        <div className="mb-[0.8rem]">
-          <h2 className="text-xl font-medium w-fit">TECHNOLOGIES</h2>
-        </div>
-        <div className="flex flex-wrap gap-2 ">
-          <Badge className="bg-blue-400 text-muted">Typescript</Badge>
-          <Badge className="bg-blue-300 text-muted">React</Badge>
-          <Badge className="text-muted">Next</Badge>
-          <Badge className="bg-green-400/80 text-muted">Node</Badge>
-          <Badge className="bg-yellow-500/80 text-muted">Express</Badge>
-          <Badge className="bg-green-700 text-muted">Mongo</Badge>
-        </div>
-      </div>
-      <hr className="my-10 w-[50%] mx-auto min-h-1 bg-muted-foreground" />
       <div>
         <div className="mb-[0.8rem]">
           <h2 className="text-xl font-medium">CONTACTS</h2>
