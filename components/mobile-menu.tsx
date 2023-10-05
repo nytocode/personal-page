@@ -1,12 +1,15 @@
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import { Sheet, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const MobileMenu = () => {
   return (
     <Sheet>
-      <SheetTrigger>
-        <HamburgerMenuIcon />
+      <SheetTrigger asChild className="md:hidden">
+        <HamburgerMenuIcon className="h-[1.4rem] w-[1.4rem]" />
       </SheetTrigger>
+      <SheetContent side="top">
+        <div>Menu</div>
+      </SheetContent>
     </Sheet>
   );
 };
