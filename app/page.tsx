@@ -84,12 +84,12 @@ export default function Home() {
           <h2 className="text-xl font-medium w-fit">TECHNOLOGIES</h2>
         </div>
         <div className="flex flex-wrap gap-2 ">
-          <Badge className="bg-blue-400 text-muted">Typescript</Badge>
-          <Badge className="bg-blue-300 text-muted">React</Badge>
-          <Badge className="text-muted">Next</Badge>
-          <Badge className="bg-green-400/80 text-muted">Node</Badge>
-          <Badge className="bg-yellow-500/80 text-muted">Express</Badge>
-          <Badge className="bg-green-700 text-muted">Mongo</Badge>
+          <Badge className="">Typescript</Badge>
+          <Badge className="">React</Badge>
+          <Badge className="">Next</Badge>
+          <Badge className="">Node</Badge>
+          <Badge className="">Express</Badge>
+          <Badge className="">Mongo</Badge>
         </div>
       </div>
       <hr className="my-10 w-[50%] mx-auto min-h-1 bg-muted-foreground" />
