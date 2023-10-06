@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex-1 overflow-y-scroll flex flex-col w-[90%] max-w-[700px] mx-auto px-5 py-[50px]">
-      <div className="mb-10 flex justify-center md:justify-start">
+      <div className="mb-10">
         <Image
           className="rounded-full grayscale"
           alt="profile picture"

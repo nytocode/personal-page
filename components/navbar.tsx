@@ -31,7 +31,7 @@ const Navbar = () => {
         <a
           href="https://github.com/nytocode/personal-webapp"
           target="_blank"
-          className="flex items-center gap-1 cursor-pointer"
+          className="flex items-center gap-2 cursor-pointer"
         >
           <GitHubLogoIcon className="h-[1.4rem] w-[1.4rem]" />
           <span className="">Source</span>
