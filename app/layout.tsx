@@ -33,7 +33,9 @@ export default function RootLayout({
         >
           <div className="h-screen w-screen flex flex-col">
             <Navbar />
-            {children}
+            <div className="flex-1 overflow-y-scroll flex flex-col w-[90%] max-w-[700px] mx-auto px-5 py-[50px]">
+              {children}
+            </div>
             <Footer />
           </div>
         </ThemeProvider>
