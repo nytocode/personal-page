@@ -17,3 +17,16 @@ export const getPostBySlug = async (slug: string) => {
 
   return { meta: { ...frontmatter, slug }, content };
 };
+
+export const getAllPostsMeta = async () => {
+  const files = fs.readdirSync(postsDir);
+
+  const posts: any[] = [];
+
+  for (const file of files) {
+    const { meta } = await getPostBySlug(file.replace(/\.mdx$/, ""));
+    posts.push(meta);
+  }
+
+  return posts;
+};
