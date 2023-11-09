@@ -1,9 +1,9 @@
 import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { getAllPostsMeta } from "@/lib/mdx";
+// import { getAllPostsMeta } from "@/lib/mdx";
 import Link from "next/link";
 
 export default async function Blog() {
-  const posts = await getAllPostsMeta();
+  const posts: any[] = []; // await getAllPostsMeta();
 
   if (posts.length === 0) {
     return (
