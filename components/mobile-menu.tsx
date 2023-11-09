@@ -1,11 +1,16 @@
+"use client";
+
 import { GitHubLogoIcon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
+import { useState } from "react";
 
 const MobileMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild className="md:hidden">
         <HamburgerMenuIcon className="h-[1.4rem] w-[1.4rem]" />
       </SheetTrigger>
@@ -14,6 +19,7 @@ const MobileMenu = () => {
           <ul className="flex flex-col gap-10">
             <li>
               <Link
+                onClick={() => setIsOpen(false)}
                 className="p-2 cursor-pointer bg-background text-foreground hover:invert"
                 href="/work"
               >
@@ -22,6 +28,7 @@ const MobileMenu = () => {
             </li>
             <li>
               <Link
+                onClick={() => setIsOpen(false)}
                 className="p-2 cursor-pointer bg-background text-foreground hover:invert"
                 href="/blog"
               >
