@@ -23,7 +23,7 @@ const MobileMenu = () => {
             <li>
               <Link
                 className="p-2 cursor-pointer bg-background text-foreground hover:invert"
-                href="/wblog"
+                href="/blog"
               >
                 Blog
               </Link>
