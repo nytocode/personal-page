@@ -1,6 +1,6 @@
 # Creative Coder
 
-This is the official repo of my project [Creative Coder](creativecoder.io).
+This is the official repo of my project [Creative Coder](www.creativecoder.io).
 
 Developed with **next 13**, **Typescript** and **Tailwindcss**.
 
