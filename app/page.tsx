@@ -97,14 +97,28 @@ export default function Home() {
         <div className="mb-[0.8rem]">
           <h2 className="text-xl font-medium">CONTACTS</h2>
         </div>
-        <ul>
-          <li className="flex items-center gap-2">
-            <GitHubLogoIcon />
-            <span>nytocode</span>
+        <ul className="flex flex-col gap-2">
+          <li>
+            <a
+              href="https://github.com/nytocode"
+              target="_blank"
+              referrerPolicy="no-referrer"
+              className="flex items-center gap-2 cursor-pointer"
+            >
+              <GitHubLogoIcon />
+              <span>nytocode</span>
+            </a>
           </li>
-          <li className="flex items-center gap-2">
-            <InstagramLogoIcon />
-            <span>anto4te</span>
+          <li>
+            <a
+              href="https://www.instagram.com/anto.4te"
+              target="_blank"
+              referrerPolicy="no-referrer"
+              className="flex items-center gap-2 cursor-pointer"
+            >
+              <InstagramLogoIcon />
+              <span>anto4te</span>
+            </a>
           </li>
         </ul>
       </div>
