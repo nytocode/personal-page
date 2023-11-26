@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
 import { useState } from "react";
+import Logo from "./logo";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,12 @@ const MobileMenu = () => {
       <SheetContent side="top" className="h-screen pt-10">
         <nav>
           <ul className="flex flex-col gap-10">
+            <li className="flex justify-center">
+              <Link onClick={() => setIsOpen(false)} href="/">
+                <Logo />
+              </Link>
+            </li>
+            <hr />
             <li>
               <Link
                 onClick={() => setIsOpen(false)}

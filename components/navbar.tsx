@@ -2,6 +2,7 @@ import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import MobileMenu from "./mobile-menu";
+import Logo from "./logo";
 
 const Navbar = () => {
   return (
@@ -9,6 +10,11 @@ const Navbar = () => {
       <MobileMenu />
       <nav className="hidden md:inline-block">
         <ul className="flex items-center gap-4">
+          <li>
+            <Link className="cursor-pointer" href="/">
+              <Logo />
+            </Link>
+          </li>
           <li>
             <Link
               className="p-2 cursor-pointer bg-background text-foreground hover:invert"
