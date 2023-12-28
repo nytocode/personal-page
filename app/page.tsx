@@ -28,7 +28,7 @@ export default function Home() {
       <div className="mt-[2rem]">
         <p className="text-muted-foreground">
           Full-Stack Software Engineer, based in Italy, passionate about
-          building amazing and useful digital products. Currently working at an
+          building amazing and useful digital products. Currently working for an
           italian software company developing new stuff every day. My actual
           goal is to improve my skills in building software to the point to be
           able to manage my own software company. In the meantime I challenge
