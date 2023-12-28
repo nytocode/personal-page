@@ -5,22 +5,25 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="mb-10">
+      <div className="flex items-center justify-center mb-10">
+        <Image alt="banner" src="/img/banner.jpeg" width={300} height={300} />
+      </div>
+      <div className="flex items-center gap-4">
         <Image
           className="rounded-full grayscale"
           alt="profile picture"
           src="/img/profile.jpg"
-          width={100}
-          height={100}
+          width={70}
+          height={70}
         />
-      </div>
-      <div className="flex flex-col">
-        <h1 className="text-2xl font-medium tracking-wider mb-[0.5rem]">
-          Antonio Forte
-        </h1>
-        <h3 className="text-muted-foreground text-sm">
-          Full-Stack Software Engineer
-        </h3>
+        <div className="flex flex-col">
+          <h1 className="text-xl md:text-2xl font-medium tracking-wider mb-[0.5rem]">
+            Antonio Forte
+          </h1>
+          <h3 className="text-muted-foreground text-sm">
+            Full-Stack Software Engineer
+          </h3>
+        </div>
       </div>
       <div className="mt-[2rem]">
         <p className="text-muted-foreground">
