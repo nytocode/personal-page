@@ -1,3 +1,4 @@
+import ContactForm from "@/components/contact-form";
 import { Badge } from "@/components/ui/badge";
 import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
@@ -76,9 +77,10 @@ export default function Home() {
           <h2 className="text-xl font-medium w-fit md:ml-auto">INTERESTS</h2>
         </div>
         <div className="flex md:justify-end gap-2">
-          <Badge>Gym</Badge>
-          <Badge>Cooking</Badge>
-          <Badge>Music</Badge>
+          <Badge>Sport</Badge>
+          <Badge>Food</Badge>
+          <Badge>Films</Badge>
+          <Badge>Books</Badge>
         </div>
       </div>
       <hr className="mx-auto md:mx-0 my-10 min-h-1 w-[50%] bg-muted-foreground" />
@@ -93,6 +95,7 @@ export default function Home() {
           <Badge className="">Node</Badge>
           <Badge className="">Express</Badge>
           <Badge className="">Mongo</Badge>
+          <Badge className="">TailwindCSS</Badge>
         </div>
       </div>
       <hr className="my-10 w-[50%] mx-auto min-h-1 bg-muted-foreground" />
@@ -100,7 +103,8 @@ export default function Home() {
         <div className="mb-[0.8rem]">
           <h2 className="text-xl font-medium">CONTACTS</h2>
         </div>
-        <ul className="flex flex-col gap-2">
+        <ContactForm />
+        <ul className="flex flex-col gap-2 my-10">
           <li>
             <a
               href="https://github.com/nytocode"
