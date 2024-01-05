@@ -122,13 +122,13 @@ export default function Home() {
           </li>
           <li>
             <a
-              href="https://www.instagram.com/anto.4te"
+              href="https://www.instagram.com/nytodev"
               target="_blank"
               referrerPolicy="no-referrer"
               className="flex items-center gap-2 cursor-pointer text-muted-foreground"
             >
               <InstagramLogoIcon />
-              <span>anto4te</span>
+              <span>nytodev</span>
             </a>
           </li>
         </ul>
