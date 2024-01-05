@@ -11,7 +11,12 @@ type Inputs = {
 };
 
 const ContactForm = () => {
-  const { register, handleSubmit, reset } = useForm<Inputs>();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { isValid },
+  } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
       await fetch("/api/contact", {
@@ -33,24 +38,26 @@ const ContactForm = () => {
     >
       <div className="flex flex-col md:flex-row md:items-center gap-4">
         <div className="flex flex-col flex-1 gap-1">
-          <label>First Name</label>
+          <label className="font-medium text-muted-foreground">
+            First Name
+          </label>
           <input
-            className="bg-background text-foreground border-[1px] border-foreground outline-foreground px-2 py-1 rounded-md"
+            className="bg-background text-foreground border-[1px] border-muted-foreground outline-foreground px-2 py-1 rounded-md"
             {...register("first_name", { required: true })}
           />
         </div>
         <div className="flex flex-col flex-1 gap-1">
-          <label>Last Name</label>
+          <label className="font-medium text-muted-foreground">Last Name</label>
           <input
-            className="bg-background text-foreground border-[1px] border-foreground outline-foreground px-2 py-1 rounded-md"
+            className="bg-background text-foreground border-[1px] border-muted-foreground outline-foreground px-2 py-1 rounded-md"
             {...register("last_name", { required: true })}
           />
         </div>
       </div>
       <div className="flex flex-col gap-1">
-        <label>Email</label>
+        <label className="font-medium text-muted-foreground">Email</label>
         <input
-          className="bg-background text-foreground border-[1px] border-foreground outline-foreground px-2 py-1 rounded-md"
+          className="bg-background text-foreground border-[1px] border-muted-foreground outline-foreground px-2 py-1 rounded-md"
           type="email"
           {...register("email", {
             required: true,
@@ -59,14 +66,15 @@ const ContactForm = () => {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label>Message</label>
+        <label className="font-medium text-muted-foreground">Message</label>
         <textarea
-          className="h-[200px] bg-background text-foreground border-[1px] border-foreground outline-foreground px-2 py-1 rounded-md"
+          className="h-[200px] bg-background text-foreground border-[1px] border-muted-foreground outline-foreground px-2 py-1 rounded-md"
           {...register("message", { required: true })}
         />
       </div>
       <button
-        className="bg-foreground text-background rounded-md font-bold py-2 md:hover:scale-105 transition md:w-1/3"
+        disabled={!isValid}
+        className="bg-foreground text-background rounded-md font-bold py-2 md:hover:scale-105 disabled:hover:scale-100 disabled:bg-muted-foreground transition md:w-1/3"
         type="submit"
       >
         SEND

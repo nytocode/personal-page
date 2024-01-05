@@ -103,14 +103,18 @@ export default function Home() {
         <div className="mb-[0.8rem]">
           <h2 className="text-xl font-medium">CONTACTS</h2>
         </div>
+        <p className="mb-[1rem] text-muted-foreground">
+          Feel free to contact me if you need help or you are interested in
+          collaborating on a project.
+        </p>
         <ContactForm />
-        <ul className="flex flex-col gap-2 my-10">
+        <ul className="flex flex-col gap-2 my-[1rem]">
           <li>
             <a
               href="https://github.com/nytocode"
               target="_blank"
               referrerPolicy="no-referrer"
-              className="flex items-center gap-2 cursor-pointer"
+              className="flex items-center gap-2 cursor-pointer text-muted-foreground"
             >
               <GitHubLogoIcon />
               <span>nytocode</span>
@@ -121,7 +125,7 @@ export default function Home() {
               href="https://www.instagram.com/anto.4te"
               target="_blank"
               referrerPolicy="no-referrer"
-              className="flex items-center gap-2 cursor-pointer"
+              className="flex items-center gap-2 cursor-pointer text-muted-foreground"
             >
               <InstagramLogoIcon />
               <span>anto4te</span>
