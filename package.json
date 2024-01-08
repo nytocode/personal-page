@@ -19,6 +19,7 @@
     "next": "latest",
     "next-mdx-remote": "^4.4.1",
     "next-themes": "^0.2.1",
+    "posthog-js": "^1.96.1",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.49.2",
