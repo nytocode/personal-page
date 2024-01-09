@@ -32,8 +32,7 @@ export default function Home() {
           building amazing and useful digital products. Currently working for an
           italian software company developing new stuff every day. My actual
           goal is to improve my skills in building software to the point to be
-          able to manage my own software company. In the meantime I challenge
-          myself with some freelance work.
+          able to build and manage complex projects.
         </p>
       </div>
       <hr className="mx-auto md:mx-0 my-10 min-h-1 w-[50%] bg-muted-foreground" />
