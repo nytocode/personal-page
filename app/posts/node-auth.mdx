@@ -2,10 +2,10 @@
 title: Node Auth
 date: 2024-01-23
 tags: [blog, nodejs, express]
+author: Antonio Forte
 ---
 
 # Node Auth
-Created on: 2024-01-23 08:23
 
 In this article I want to describe a simple method to implement JWT (JASON WEB TOKEN) authentication with [**Node**](https://nodejs.org/en), [**Express**](https://expressjs.com/) and [**Typescript**](https://www.typescriptlang.org/).
 
@@ -21,7 +21,7 @@ Other packages used to build this app are [**Prisma**](https://www.prisma.io/) a
 - [Prisma schema](#prisma-schema)
 - [Authentication process](#authentication-process)
 
-## How JWT authentication works
+## How JWT authentication works <span id="how-jwt-authentication-works" />
 
 JASON Web Token is a valid alternative to session authentication and one main difference is related to the possibility to be **State-less**. A system designed with this form of authentication doesn't require to access a database to gather information about the user on every request and in some cases this can allow better performances.
 
@@ -32,7 +32,7 @@ In the case presented the system is not properly stateless, because on every req
 Like every system JWT is not perfect and may not be the best choice for a project, but in many cases is the right path to secure an application and most **APIs** on the web are authenticated using this method.
 
 
-## Project setup
+## Project setup <span id="project-setup" />
 
 Using **Typescript** and **TailwindCSS** caused this first step to be longer.
 The first thing to do after we add the *package.json* to the project is to install all the required dependencies.
@@ -139,7 +139,7 @@ Here are some script to add to run the project and another configuration file fo
 ...
 ```
 
-## Prisma schema
+## Prisma schema <span id="prisma-schema" />
  
 **Prisma** is used to model user entity and access the **PostgreSQL** database and one important part of this project concern the definition of the **User** schema.
 
@@ -159,7 +159,7 @@ model User {
 
 Once the schema is defined and model are generated it is possible to use **Prisma Client** to access and modify data.
 
-## Authentication process
+## Authentication process <span id="authentication-process" />
 
 Users will be authenticated using email and password that encrypted using **bcrypt** and then stored.
 
@@ -375,7 +375,7 @@ export const protect = async (
 
 ## Conclusion
 
-This project can be used as starting point to build the authentication for an API or a full stack app. It is not perfect but is solid base, and I think it can be useful to many developers who doesn't know where to start.
+This project can be used as starting point to build the authentication for an API or a full stack app. It is not perfect but is solid base, and I think it can be useful to many developers who don't know where to start.
 The entire [source code](https://github.com/nytocode/node-auth) can be found on github and I will improve it in the future.
 
 ### Useful resources
